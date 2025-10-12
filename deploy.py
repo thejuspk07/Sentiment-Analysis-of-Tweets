@@ -159,22 +159,51 @@ h1 {
     transform: translateY(0);
 }
 
-
-
 /* ======== Text Area ======== */
 .stTextArea > div > div > textarea {
-    border-radius: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.05);
-    color: #f1f5f9;
-    padding: 15px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    border-radius: 15px !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    background-color: rgba(241, 245, 249, 0.95) !important;
+    color: #1e293b !important;
+    padding: 15px !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
 }
+
+/* Label styling */
+.stTextArea > label {
+    color: #cbd5e1 !important;
+}
+
+.stTextArea > div > div > textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
 .stTextArea > div > div > textarea:focus {
-    border-color: #38bdf8;
-    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-    transform: scale(1.01);
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2) !important;
+    background-color: rgba(30, 41, 59, 0.9) !important;
+    color: #f1f5f9 !important;
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+    .stTextArea > div > div > textarea {
+        background-color: #f0f4f8 !important;
+        color: #1e293b !important;
+        border: 2px solid #cbd5e1 !important;
+    }
+    
+    .stTextArea > div > div > textarea::placeholder {
+        color: #64748b !important;
+    }
+    
+    .stTextArea > div > div > textarea:focus {
+        border-color: #0ea5e9 !important;
+        box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15) !important;
+        background-color: #f0f4f8 !important;
+        color: #1e293b !important;
+    }
 }
 
 /* ======== Confidence Bar ======== */
@@ -387,33 +416,32 @@ if 'analyzed' not in st.session_state:
 import random
 
 def random_choice():
-    A='I absolutely love this product! It’s fantastic and exceeded my expectations. Highly recommended! 😊'
+    A="I absolutely love this product! It's fantastic and exceeded my expectations. Highly recommended! 😊"
     B='how is your day today'
-    C='The product is okay. Nothing special, but it does what it’s supposed to do. 😐'
-    D='The service was outstanding, and the staff went above and beyond to help me. I’m really impressed! 🌟'
-    E='I’m really disappointed with this experience. Nothing worked as promised, and support didn’t respond. 😠' 
-    F='It’s an average experience. Not too bad, but nothing remarkable either. 🤷‍♂️'
-    G = "Absolutely fantastic! Everything worked perfectly, and I couldn’t be happier. 😍"
+    C="The product is okay. Nothing special, but it does what it's supposed to do. 😐"
+    D="The service was outstanding, and the staff went above and beyond to help me. I'm really impressed! 🌟"
+    E="I'm really disappointed with this experience. Nothing worked as promised, and support didn't respond. 😠"
+    F="It's an average experience. Not too bad, but nothing remarkable either. 🤷‍♂️"
+    G = "Absolutely fantastic! Everything worked perfectly, and I couldn't be happier. 😍"
     H = "What an amazing experience! Totally worth it and exceeded all my expectations. 🌈"
-    I = "I’m so satisfied with my purchase. Great quality and fast delivery! 👍"
+    I = "I'm so satisfied with my purchase. Great quality and fast delivery! 👍"
     J = "Loved it! The design, the feel, everything was just perfect. 💖"
     K = "Superb quality and excellent value for money. Would definitely buy again! 🥰"
     L = "Terrible experience. The product broke after just one use. 😤"
-    M = "I regret buying this. It’s nothing like what was advertised. 😩"
+    M = "I regret buying this. It's nothing like what was advertised. 😩"
     N = "Poor quality and bad customer support. Definitely not worth the price. 👎"
     O = "Completely disappointed. I expected much better for the cost. 😔"
     P = "It stopped working within a week. Such a waste of money. 😡"
-    Q = "My day’s been decent."
-    R = "It’s okay, nothing special."
+    Q = "My day's been decent."
+    R = "It's okay, nothing special."
     S = "Just another normal day."
     T = "Feeling alright."
-    U = "It’s fine, I guess."
+    U = "It's fine, I guess."
     V = "Nothing much happening."
-    W = "I’m doing okay."
+    W = "I'm doing okay."
     X = "Pretty average day."
-    Y = "Everything’s normal."
-    Z = "Can’t complain, it’s okay."
-
+    Y = "Everything's normal."
+    Z = "Can't complain, it's okay."
 
     options = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
     choice = random.choice(options)
@@ -421,6 +449,7 @@ def random_choice():
 
 def set_example():
     st.session_state.text_input = random_choice()
+
 # Text input
 user_input = st.text_area(
     "Enter your text to analyze:",
