@@ -8,7 +8,7 @@ The system is built using Python and deployed as an interactive Streamlit web ap
 
 ## ✨ Live Demo
 
-You can explore the live demo deployed on Streamlit Cloud:
+You can explore the live demo deployed on Streamlit  Cloud:
 
 **[https://sentiment-analysis-of-tweets-111111111.streamlit.app/](https://sentiment-analysis-of-tweets-111111111.streamlit.app/)**
 
