@@ -105,6 +105,6 @@ The Streamlit app can be deployed on [Streamlit Cloud](https://streamlit.io/clou
 
 For questions or feedback, open an issue or contact [thejuspk07](https://github.com/thejuspk07).
 
-----
+-----
 
 [Back to top](#sentiment-analysis-of-tweets)
