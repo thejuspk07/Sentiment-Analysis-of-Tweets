@@ -65,7 +65,7 @@ This repository contains:
 
 - Open the [live demo](https://sentiment-analysis-of-tweets-111111111.streamlit.app/) or run locally as above.
 - Enter your tweet in the web interface.
-- Click "Analyze" to see the predicted sentiment and visualization.
+- Click "Analyze" to see the predicted sentiment and visualization.techinique
 
 ## 📦 Dependencies
 
