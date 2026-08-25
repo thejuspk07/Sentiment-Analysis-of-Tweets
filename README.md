@@ -27,7 +27,7 @@ This repository contains:
 - Train and evaluate an SVM classifier
 - Predict sentiment of new/unseen tweets
 - User-friendly web interface for real-time sentiment analysis
-- Visualizations of sentiment predictions..
+- Visualizations of sentiment predictions...
 
 ## 🗂️ Repository Structure
 
