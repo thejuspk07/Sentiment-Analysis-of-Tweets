@@ -28,6 +28,7 @@ This repository contains:
 - Predict sentiment of new/unseen tweets
 - User-friendly web interface for real-time sentiment analysis
 - Visualizations of sentiment predictions...
+- predicts
 
 ## 🗂️ Repository Structure
 
